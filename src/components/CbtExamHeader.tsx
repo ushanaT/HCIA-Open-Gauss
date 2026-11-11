@@ -59,7 +59,7 @@ export const CbtExamHeader: React.FC<CbtExamHeaderProps> = ({
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const isTimeCritical = timeLeft < 600 && mode === 'timed'; // under 10 mins
+  const isTimeCritical = timeLeft < 300 && mode === 'timed'; // under 5 mins warning
 
   return (
     <>
@@ -183,7 +183,7 @@ export const CbtExamHeader: React.FC<CbtExamHeaderProps> = ({
                 <Clock className="w-3.5 h-3.5" />
                 <span>{formatTime(timeLeft)}</span>
               </div>
-              <span className="text-slate-500 hidden sm:inline">(Total: 90 Minutes)</span>
+              <span className="text-slate-500 hidden sm:inline">(Total: 50 Minutes)</span>
             </div>
 
             {/* Answer metrics */}
@@ -286,7 +286,7 @@ export const CbtExamHeader: React.FC<CbtExamHeaderProps> = ({
                   <li>Total Questions: 50 multiple-choice items</li>
                   <li>Total Score: 1000 points (20 points per question)</li>
                   <li>Passing Score: 600 points (60%)</li>
-                  <li>Duration: 90 Minutes standard exam window</li>
+                  <li>Duration: 50 Minutes (1 min per question)</li>
                 </ul>
               </div>
 

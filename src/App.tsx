@@ -9,7 +9,7 @@ import { ExamResults } from './components/ExamResults';
 import { StudyBankView } from './components/StudyBankView';
 import { FlashcardsView } from './components/FlashcardsView';
 
-const EXAM_DURATION_SECONDS = 90 * 60; // 90 minutes
+const EXAM_DURATION_SECONDS = 50 * 60; // 50 minutes (1 minute per question for 50 questions)
 const STORAGE_KEY_NAME = 'hcia_opengauss_candidate_name';
 const STORAGE_KEY_HISTORY = 'hcia_opengauss_exam_history';
 
@@ -175,7 +175,7 @@ export default function App() {
     setQuestions(subset);
     setAnswers({});
     setFlagged({});
-    setTimeLeft(Math.max(subset.length * 90, 600)); // 1.5 min per question or min 10 mins
+    setTimeLeft(Math.max(subset.length * 60, 300)); // 1 min per question (min 5 mins)
     setCurrentIndex(0);
     setIsTimerRunning(true);
     setShowPracticeExplanation(false);
