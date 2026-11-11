@@ -1,0 +1,6 @@
+{
+  "name": "HCIA-openGauss CBT Exam Simulator",
+  "description": "Comprehensive Computer-Based Test (CBT) and exam simulator for HCIA-openGauss certification featuring authentic timed exams, practice drills, and detailed explanations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
